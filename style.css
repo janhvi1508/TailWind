@@ -1,0 +1,62 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #f4f4f4;
+}
+header {
+  background: #222;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Side-by-Side Layout */
+main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  gap: 10px;
+  padding: 10px;
+}
+.pane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+.label {
+  padding: 10px;
+  font-weight: bold;
+  background: #eee;
+  border-bottom: 1px solid #ddd;
+  border-radius: 8px 8px 0 0;
+}
+
+textarea {
+  flex: 1;
+  border: none;
+  padding: 15px;
+  font-family: monospace;
+  resize: none;
+  outline: none;
+  font-size: 14px;
+}
+#render-area {
+  flex: 1;
+  padding: 15px;
+  overflow: auto;
+}
+
+#error-log {
+  color: #d9534f;
+  padding: 10px;
+  font-size: 12px;
+  min-height: 20px;
+}

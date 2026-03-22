@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chai CSS Parser</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        background: #1e1e1e;
+        color: #d4d4d4;
+      }
+      header {
+        padding: 15px 25px;
+        background: #252526;
+        border-bottom: 1px solid #333;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      h1 {
+        margin: 0;
+        font-size: 1.2rem;
+        color: #ce9178;
+      }
+
+      .container {
+        display: flex;
+        flex: 1;
+        overflow: hidden;
+        gap: 2px;
+        background: #333;
+      }
+      .pane {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        background: #1e1e1e;
+      }
+      .label {
+        padding: 8px 15px;
+        background: #2d2d2d;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #888;
+      }
+
+      textarea {
+        flex: 1;
+        border: none;
+        padding: 20px;
+        background: #1e1e1e;
+        color: #9cdcfe;
+        font-family: "Consolas", monospace;
+        font-size: 14px;
+        resize: none;
+        outline: none;
+      }
+      #render-area {
+        flex: 1;
+        padding: 20px;
+        background: white;
+        color: black;
+        overflow: auto;
+      }
+
+      #run-btn {
+        background: #0e639c;
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        cursor: pointer;
+        border-radius: 2px;
+        font-weight: bold;
+      }
+      #run-btn:hover {
+        background: #1177bb;
+      }
+      #error-display {
+        color: #f48771;
+        font-size: 13px;
+        padding-left: 15px;
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>☕ CHAI PARSER</h1>
+      <div id="error-display"></div>
+      <button id="run-btn">RUN PARSER</button>
+    </header>
+
+    <div class="container">
+      <div class="pane">
+        <div class="label">Input HTML</div>
+        <textarea
+          id="html-input"
+          spellcheck="false"
+          placeholder="<div class='chai-p-20 chai-bg-orange'>Hello</div>"
+        ></textarea>
+      </div>
+
+      <div class="pane">
+        <div class="label">Live Preview</div>
+        <div id="render-area"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
